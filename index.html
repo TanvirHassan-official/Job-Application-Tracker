@@ -69,7 +69,7 @@
     <section id="job-section" class="grid col-span-1 gap-5 pb-30">
         <div class="available flex justify-between">
             <h1>Available Jobs</h1>
-            <p>8 jobs</p>
+            <p id="total-count">8 jobs</p>
         </div>
             <div role="tablist" class="tabs tabs-box">
                 <a role="tab" class="tab tab-active bg-[#3B82F6] text-white" onclick="showSection('job-section')">All</a>
@@ -78,7 +78,7 @@
             </div>
 
         <div id="job-container" class="grid gap-4">
-            <div class="card bg-base-100  shadow-sm">
+            <div id="card-1" class="card bg-base-100  shadow-sm">
                 <div class="card-body p-6 flex gap-5">
                     <div class="card-title-icon flex justify-between">
                         <div class="card-title-container ">
@@ -86,24 +86,24 @@
                             <h3 class="text-[#64748B]">React Native Developer</h4>
                         </div>
                         
-                        <button class="btn"><i class="fa-regular fa-trash-can"></i></button>
+                        <button onclick="deleteCard(this)" class="btn delete"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
 
                     <p class="text-sm text-[#64748B]">Remote . Full-time . $130,000-$175,000</p>
 
                     <div>
-                        <p class="text-[#002C5C]  bg-[#EEF4FF] px-3 py-2 inline-block font-semibold">NOT APPLIED</p>
+                        <p class="text-[#002C5C]  bg-[#EEF4FF] px-3 py-2 inline-block font-semibold card-status">NOT APPLIED</p>
                     </div>
                     
                     <p class="text-sm">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     <div class="card-actions justify-start">
-                        <button class="btn btn-outline btn-accent">INTERVIEW</button>
-                        <button class="btn btn-outline btn-error">REJECTED</button>
+                        <button onclick="interview(this)" class="btn btn-outline btn-accent">INTERVIEW</button>
+                        <button onclick="rejected(this)" class="btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
             </div>
 
-            <div class="card bg-base-100  shadow-sm">
+            <div id="card-2" class="card bg-base-100  shadow-sm">
                 <div class="card-body p-6 flex gap-5">
                     <div class="card-title-icon flex justify-between">
                         <div class="card-title-container ">
@@ -111,24 +111,24 @@
                             <h3 class="text-[#64748B]">Web Designer & Developer</h4>
                         </div>
                         
-                        <button class="btn"><i class="fa-regular fa-trash-can"></i></button>
+                        <button onclick="deleteCard(this)" class="btn delete"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
 
                     <p class="text-sm text-[#64748B]">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
 
                     <div>
-                        <p class="text-[#002C5C]  bg-[#EEF4FF] px-3 py-2 inline-block font-semibold">NOT APPLIED</p>
+                        <p class="text-[#002C5C]  bg-[#EEF4FF] px-3 py-2 inline-block font-semibold card-status">NOT APPLIED</p>
                     </div>
                     
                     <p class="text-sm">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                     <div class="card-actions justify-start">
-                        <button class="btn btn-outline btn-accent">INTERVIEW</button>
-                        <button class="btn btn-outline btn-error">REJECTED</button>
+                        <button onclick="interview(this)" class="btn btn-outline btn-accent">INTERVIEW</button>
+                        <button onclick="rejected(this)" class="btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
             </div>
 
-            <div class="card bg-base-100  shadow-sm">
+            <div id="card-3" class="card bg-base-100  shadow-sm">
                 <div class="card-body p-6 flex gap-5">
                     <div class="card-title-icon flex justify-between">
                         <div class="card-title-container ">
@@ -136,25 +136,25 @@
                             <h3 class="text-[#64748B]">Data Visualization Specialist</h4>
                         </div>
                         
-                        <button class="btn"><i class="fa-regular fa-trash-can"></i></button>
+                        <button onclick="deleteCard(this)" class="btn delete"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
 
                     <p class="text-sm text-[#64748B]">Boston, MA • Full-time • $125,000 - $165,000</p>
 
                     <div>
-                        <p class="text-[#002C5C]  bg-[#EEF4FF] px-3 py-2 inline-block font-semibold">NOT APPLIED</p>
+                        <p class="text-[#002C5C]  bg-[#EEF4FF] px-3 py-2 inline-block font-semibold card-status">NOT APPLIED</p>
                     </div>
                     
                     <p class="text-sm">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
 </p>
                     <div class="card-actions justify-start">
-                        <button class="btn btn-outline btn-accent">INTERVIEW</button>
-                        <button class="btn btn-outline btn-error">REJECTED</button>
+                        <button onclick="interview(this)" class="btn btn-outline btn-accent">INTERVIEW</button>
+                        <button onclick="rejected(this)" class="btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
             </div>
 
-            <div class="card bg-base-100  shadow-sm">
+            <div id="card-4" class="card bg-base-100  shadow-sm">
                 <div class="card-body p-6 flex gap-5">
                     <div class="card-title-icon flex justify-between">
                         <div class="card-title-container ">
@@ -162,24 +162,24 @@
                             <h3 class="text-[#64748B]">Backend Developer</h4>
                         </div>
                         
-                        <button class="btn"><i class="fa-regular fa-trash-can"></i></button>
+                        <button onclick="deleteCard(this)" class="btn delete"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
 
                     <p class="text-sm text-[#64748B]">Seattle, WA • Full-time • $140,000 - $190,000</p>
 
                     <div>
-                        <p class="text-[#002C5C]  bg-[#EEF4FF] px-3 py-2 inline-block font-semibold">NOT APPLIED</p>
+                        <p class="text-[#002C5C]  bg-[#EEF4FF] px-3 py-2 inline-block font-semibold card-status">NOT APPLIED</p>
                     </div>
                     
                     <p class="text-sm">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                     <div class="card-actions justify-start">
-                        <button class="btn btn-outline btn-accent">INTERVIEW</button>
-                        <button class="btn btn-outline btn-error">REJECTED</button>
+                        <button onclick="interview(this)" class="btn btn-outline btn-accent">INTERVIEW</button>
+                        <button onclick="rejected(this)" class="btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
             </div>
 
-            <div class="card bg-base-100  shadow-sm">
+            <div id="card-5" class="card bg-base-100  shadow-sm">
                 <div class="card-body p-6 flex gap-5">
                     <div class="card-title-icon flex justify-between">
                         <div class="card-title-container ">
@@ -187,24 +187,24 @@
                             <h3 class="text-[#64748B]">UI/UX Engineer</h4>
                         </div>
                         
-                        <button class="btn"><i class="fa-regular fa-trash-can"></i></button>
+                        <button onclick="deleteCard(this)" class="btn delete"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
 
                     <p class="text-sm text-[#64748B]">Austin, TX • Full-time • $110,000 - $150,000</p>
 
                     <div>
-                        <p class="text-[#002C5C]  bg-[#EEF4FF] px-3 py-2 inline-block font-semibold">NOT APPLIED</p>
+                        <p class="text-[#002C5C]  bg-[#EEF4FF] px-3 py-2 inline-block font-semibold card-status">NOT APPLIED</p>
                     </div>
                     
                     <p class="text-sm">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                     <div class="card-actions justify-start">
-                        <button class="btn btn-outline btn-accent">INTERVIEW</button>
-                        <button class="btn btn-outline btn-error">REJECTED</button>
+                        <button onclick="interview(this)" class="btn btn-outline btn-accent">INTERVIEW</button>
+                        <button onclick="rejected(this)" class="btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
             </div>
 
-            <div class="card bg-base-100  shadow-sm">
+            <div id="card-6" class="card bg-base-100  shadow-sm">
                 <div class="card-body p-6 flex gap-5">
                     <div class="card-title-icon flex justify-between">
                         <div class="card-title-container ">
@@ -212,24 +212,24 @@
                             <h3 class="text-[#64748B]">JavaScript Developer</h4>
                         </div>
                         
-                        <button class="btn"><i class="fa-regular fa-trash-can"></i></button>
+                        <button onclick="deleteCard(this)" class="btn delete"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
 
                     <p class="text-sm text-[#64748B]">New York, NY • Full-time • $130,000 - $170,00</p>
 
                     <div>
-                        <p class="text-[#002C5C]  bg-[#EEF4FF] px-3 py-2 inline-block font-semibold">NOT APPLIED</p>
+                        <p class="text-[#002C5C]  bg-[#EEF4FF] px-3 py-2 inline-block font-semibold card-status">NOT APPLIED</p>
                     </div>
                     
                     <p class="text-sm">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                     <div class="card-actions justify-start">
-                        <button class="btn btn-outline btn-accent">INTERVIEW</button>
-                        <button class="btn btn-outline btn-error">REJECTED</button>
+                        <button onclick="interview(this)" class="btn btn-outline btn-accent">INTERVIEW</button>
+                        <button onclick="rejected(this)" class="btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
             </div>
 
-            <div class="card bg-base-100  shadow-sm">
+            <div id="card-7" class="card bg-base-100  shadow-sm">
                 <div class="card-body p-6 flex gap-5">
                     <div class="card-title-icon flex justify-between">
                         <div class="card-title-container ">
@@ -237,44 +237,44 @@
                             <h3 class="text-[#64748B]">Full Stack Engineer</h4>
                         </div>
                         
-                        <button class="btn"><i class="fa-regular fa-trash-can"></i></button>
+                        <button onclick="deleteCard(this)" class="btn delete"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
 
                     <p class="text-sm text-[#64748B]">Remote • Full-time • $120,000 - $160,000</p>
 
                     <div>
-                        <p class="text-[#002C5C]  bg-[#EEF4FF] px-3 py-2 inline-block font-semibold">NOT APPLIED</p>
+                        <p class="text-[#002C5C]  bg-[#EEF4FF] px-3 py-2 inline-block font-semibold card-status">NOT APPLIED</p>
                     </div>
                     
                     <p class="text-sm">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                     <div class="card-actions justify-start">
-                        <button class="btn btn-outline btn-accent">INTERVIEW</button>
-                        <button class="btn btn-outline btn-error">REJECTED</button>
+                        <button onclick="interview(this)" class="btn btn-outline btn-accent">INTERVIEW</button>
+                        <button onclick="rejected(this)" class="btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
             </div>
 
-            <div class="card bg-base-100  shadow-sm">
+            <div id="card-8" class="card bg-base-100  shadow-sm">
                 <div class="card-body p-6 flex gap-5">
                     <div class="card-title-icon flex justify-between">
                         <div class="card-title-container ">
                             <h2 class="card-title text-[#002C5C] font-semibold text-lg">TechCorp Industries</h2>
                             <h3 class="text-[#64748B]">Senior Frontend Developer</h4>
                         </div>
-                        <button class="btn"><i class="fa-regular fa-trash-can"></i></button>
+                        <button onclick="deleteCard(this)" class="btn delete"><i class="fa-regular fa-trash-can"></i></button>
                         
                     </div>
 
                     <p class="text-sm text-[#64748B]">San Francisco, CA\ • Full-time • $130,000 - $175,000</p>
 
                     <div>
-                        <p class="text-[#002C5C]  bg-[#EEF4FF] px-3 py-2 inline-block font-semibold">NOT APPLIED</p>
+                        <p class="text-[#002C5C]  bg-[#EEF4FF] px-3 py-2 inline-block font-semibold card-status">NOT APPLIED</p>
                     </div>
                     
                     <p class="text-sm">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     <div class="card-actions justify-start">
-                        <button class="btn btn-outline btn-accent">INTERVIEW</button>
-                        <button class="btn btn-outline btn-error">REJECTED</button>
+                        <button onclick="interview(this)" class="btn btn-outline btn-accent">INTERVIEW</button>
+                        <button onclick="rejected(this)" class="btn btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
             </div>
@@ -282,18 +282,20 @@
     </section>
 
 
-    <section id="interview-section" class="grid col-span-1 gap-5 pb-30 hidden">
-        <div class="available flex justify-between">
-            <h1>Available Jobs</h1>
-            <p>8 jobs</p>
-        </div>
+    <section id="interview-section" class="hidden pb-30">
+        
+        <div class="grid col-span-1 gap-5 pb-5">
+            <div class="available flex justify-between">
+                <h1>Available Jobs</h1>
+                <p>0 jobs</p>
+            </div>
             <div role="tablist" class="tabs tabs-box">
                 <a role="tab" class="tab " onclick="showSection('job-section')">All</a>
                 <a role="tab" class="tab tab-active bg-[#3B82F6] text-white" onclick="showSection('interview-section')">Interview</a>
                 <a role="tab" class="tab" onclick="showSection('rejected-section')">Rejected</a>
             </div>
 
-            <div class="card bg-base-100  shadow-sm">
+            <div class="card bg-base-100  shadow-sm no-card">
                 <div class="card-body py-25 px-5 flex gap-5 items-center justify-center">
                     <div class="card-title-image grid gap-5">
                         <div class="card-image-container flex justify-center">
@@ -308,14 +310,16 @@
                 </div>
             </div>
         </div>
+    
 
     </section>
 
 
-        <section id="rejected-section" class="grid col-span-1 gap-5 pb-30 hidden">
-        <div class="available flex justify-between">
+    <section id="rejected-section" class="hidden pb-30">
+        <div class="grid col-span-1 gap-5 pb-5">
+            <div class="available flex justify-between">
             <h1>Available Jobs</h1>
-            <p>8 jobs</p>
+            <p>0 jobs</p>
         </div>
             <div role="tablist" class="tabs tabs-box">
                 <a role="tab" class="tab " onclick="showSection('job-section')">All</a>
@@ -323,7 +327,7 @@
                 <a role="tab" class="tab tab-active bg-[#3B82F6] text-white" onclick="showSection('rejected-section')">Rejected</a>
             </div>
 
-            <div class="card bg-base-100  shadow-sm">
+            <div class="card bg-base-100  shadow-sm no-card">
                 <div class="card-body py-25 px-5 flex gap-5 items-center justify-center">
                     <div class="card-title-image grid gap-5">
                         <div class="card-image-container flex justify-center">
@@ -338,10 +342,14 @@
                 </div>
             </div>
         </div>
+        </div>
+        
 
     </section>
 
     <script src="./script/tabs.js"></script>
+    <script src="./script/jobStatus.js"></script>
+    <script src="./script/delete.js"></script>
 </body>
 
 
